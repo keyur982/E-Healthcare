@@ -72,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
                 SharedPreferences.Editor editor = preferences.edit();
                 editor.clear();
                 editor.apply();
+                item.setTitle("Sign In");
                 Intent loginscreen=new Intent(this,Login.class);
                 loginscreen.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(loginscreen);

@@ -155,6 +155,12 @@ public class HospitalPage extends AppCompatActivity {
             //imageView.setImageBitmap();
             Picasso.with(context).load(imgid[position]).into(docImg);
 
+            SharedPreferences login = getSharedPreferences("logged_users", Context.MODE_PRIVATE);
+            String loginState = login.getString("status","");
+            if(loginState.equals("Logged In")) {
+                bookDoc.setVisibility(View.VISIBLE);
+            }
+
             bookDoc.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -296,7 +302,6 @@ public class HospitalPage extends AppCompatActivity {
 
     public void getData(String hid) {
         final String id = hid;
-        //StringRequest request = new StringRequest(Request.Method.POST, "http://e-health2021.rf.gd/fetchHospDoctor.php",
         StringRequest request = new StringRequest(Request.Method.POST, "https://e-healthcare2021.000webhostapp.com/fetchHospDoctor.php",
                 new Response.Listener<String>() {
                     @Override
@@ -305,12 +310,14 @@ public class HospitalPage extends AppCompatActivity {
                             JSONObject response = new JSONObject(res);
                             hospitalName = response.getString("name");
                             hospName.setText(hospitalName);
-                            Picasso.with(context).load("https://e-healthcare2021.000webhostapp.com"+response.getString("photo")).into(hospImage);
+                            Picasso.with(context).load("https://e-healthcare2021.000webhostapp.com/"+response.getString("photo")).into(hospImage);
                             hospPhone.setText(response.getString("phone"));
                             hospAddress.setText(response.getString("address"));
                             hospSince.setText(response.getString("since"));
                             hospTiming.setText(response.getString("time"));
                             hospBeds.setText(response.getString("beds"));
+
+
                             JSONArray jsonArray = response.getJSONArray("doctors");
                             if (jsonArray !=null) {
                                 did = new String[jsonArray.length()];
@@ -329,7 +336,7 @@ public class HospitalPage extends AppCompatActivity {
                                     exp[n] = object.getString("exp");
                                     timing[n] = object.getString("visiting");
                                     nxtAv[n] = object.getString("nxtAv");
-                                    imgid[n] = "http://192.168.196.189/E-health/" + object.getString("photo");
+                                    imgid[n] = "https://e-healthcare2021.000webhostapp.com/" + object.getString("photo");
                                 }
                                 myList adapter = new myList((Activity) HospitalPage.this, names, spec, exp, nxtAv, timing, imgid);
                                 hpDoctorList.setAdapter(adapter);

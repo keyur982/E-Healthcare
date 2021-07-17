@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:fillViewport="true"
-    tools:context=".HospitalPage">
+<!--<ScrollView android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:fillViewport="true"-->
+<!--    tools:context=".HospitalPage">-->
 
 <LinearLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -26,7 +26,7 @@
         <ImageView
             android:id="@+id/iv_hpImg"
             android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_height="250dp"
             tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
         <LinearLayout
@@ -153,4 +153,4 @@
            />
 
     </LinearLayout>
-</ScrollView>
+<!--</ScrollView>-->

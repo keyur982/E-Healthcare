@@ -33,7 +33,7 @@
         android:text="Please Login to book Appointments"
         android:textColor="@android:color/primary_text_light"
         android:gravity="center"
-        android:textSize="30dp"
+        android:textSize="24dp"
         />
 
     <Button

@@ -3,6 +3,7 @@ package com.ehealth.app.ui.search;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.text.Html;
 import android.util.Log;
@@ -29,6 +30,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.ehealth.app.HospitalPage;
 import com.ehealth.app.R;
+import com.ehealth.app.ui.home.HomeFragment;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
@@ -146,14 +148,15 @@ public class ItemsList {
             contactText.setText(contact[p]);
             addressText.setText(area[p]);
             timingText.setText(timing[p]);
-            //imageView.setImageBitmap();
             Picasso.with(context).load(imgid[p]).into(imageView);
             noteText.setText(note[p]);
-            if(!tableName.equals("hospital")){
-                btn_book.setVisibility(View.INVISIBLE);
-            }else{
+
+            if (tableName.equals("hospital")) {
                 btn_book.setVisibility(View.VISIBLE);
+            } else {
+                btn_book.setVisibility(View.INVISIBLE);
             }
+
 
             btn_book.setOnClickListener(new View.OnClickListener() {
                 @Override

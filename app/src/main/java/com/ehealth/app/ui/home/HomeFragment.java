@@ -54,7 +54,7 @@ public class HomeFragment extends Fragment {
 
     private HomeViewModel homeViewModel;
     String Uname,Uid;
-    String state;
+    String loginState;
     LinearLayout ll1,ll2,ll3,ll4;
     ListView lst_appoint,lst_appoint2, lst_underReview, lst_medHistory;
     private RequestQueue mQueue;
@@ -83,8 +83,8 @@ public class HomeFragment extends Fragment {
         lst_medHistory.setEmptyView(root.findViewById(R.id.emptyElement4));
 
         sp = this.getActivity().getSharedPreferences("logged_users", Context.MODE_PRIVATE);
-        state = sp.getString("status","");
-        if(state.equals("Logged In")) {
+        loginState = sp.getString("status","");
+        if(loginState.equals("Logged In")) {
             Uname = sp.getString("Uname","");
             Uid = sp.getString("user_id","");
             btnLogin.setVisibility(View.GONE);
@@ -115,7 +115,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onChanged(@Nullable String s) {
                 txtWelcome.setText("Welcome "+Uname);
-                textView.setText("\n Please Login to View/Book Appointments");
+                textView.setText("\n Go to Search \n or \n Login to View/Book Appointments");
             }
         });
 
@@ -172,7 +172,6 @@ public class HomeFragment extends Fragment {
             TextView tv_cMessage = (TextView) rowView.findViewById(R.id.tv_consMessage);
             //TextView tv_Age = (TextView) rowView.findViewById(R.id.tv_Age);
             TextView tv_hMessage = (TextView) rowView.findViewById(R.id.tv_hMessage);
-            //Button bookDoc = (Button)rowView.findViewById(R.id.btn_showAppoint);
 
 
             tv_Cid.setText(""+(position+1));
@@ -182,28 +181,6 @@ public class HomeFragment extends Fragment {
             tv_cMessage.setText(cMessage[position]);
             tv_hMessage.setText(hMessage[position]);
 
-            /*bookDoc.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getContext());
-
-                    // create alert dialog
-                    final AlertDialog alertDialog = alertDialogBuilder
-                            .setMessage("Are you want to cancel appointment ?")
-                            .setPositiveButton("Yes",null)
-                            .setNegativeButton("No",null).show();
-
-                    Button positiveButton = alertDialog.getButton(AlertDialog.BUTTON_POSITIVE);
-                    positiveButton.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            cancelAppointment(cid[position]);
-                            alertDialog.dismiss();
-                        }
-                    });
-
-                }
-            });*/
             return rowView;
         }
     }
