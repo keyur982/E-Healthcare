@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.ehealth.app.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_search"
+        android:name="com.ehealth.app.ui.search.SearchFragment"
+        android:label="@string/menu_search"
+        tools:layout="@layout/fragment_search" />
+
+   <!-- <fragment
+        android:id="@+id/nav_saved"
+        android:name="com.ehealth.app.ui.gallery.GalleryFragment"
+        android:label="@string/menu_saved"
+        tools:layout="@layout/fragment_saved" />-->
+
+    <fragment
+        android:id="@+id/nav_medic"
+        android:name="com.ehealth.app.ui.medic.MedicFragment"
+        android:label="@string/menu_medic"
+        tools:layout="@layout/fragment_medic" />
+
+
+</navigation>
