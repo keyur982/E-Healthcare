@@ -138,14 +138,6 @@
                 />
         </com.google.android.material.textfield.TextInputLayout>
 
-
-            <Spinner
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/sp_userType"
-                android:spinnerMode="dialog"
-                />
-
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -156,15 +148,7 @@
             android:textColor="@android:color/white"
             android:text="Register"/>
 
-        <TextView
-            android:id="@+id/tv_contact"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Other type of user? Please Contact Us"
-            android:layout_gravity="center"
-            android:layout_marginTop="15dp"
-            android:textSize="16dp"
-            android:textColor="@android:color/tertiary_text_dark"/>
+
 
     </LinearLayout>
 

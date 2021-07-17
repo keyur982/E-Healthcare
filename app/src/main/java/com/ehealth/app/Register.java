@@ -37,7 +37,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Register extends AppCompatActivity {
-    Spinner sp_userType;
     TextInputLayout tl_fname, tl_lname, tl_email, tl_phone, tl_password, tl_cpass;
     TextInputEditText et_fname,et_lname,et_email,et_phone, et_password, et_cfmpassword;
     Button btn_register;
@@ -47,7 +46,6 @@ public class Register extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        sp_userType = findViewById(R.id.sp_userType);
         tl_fname = findViewById(R.id.text_input_fname);
         tl_lname = findViewById(R.id.text_input_lname);
         tl_email = findViewById(R.id.text_input_email);
@@ -63,10 +61,6 @@ public class Register extends AppCompatActivity {
         et_cfmpassword = findViewById(R.id.et_cfmpassword);
         btn_register = findViewById(R.id.btn_register);
 
-        String[] types = {"User","Doctor","Admin"};
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_dropdown_item_1line,types);
-        sp_userType.setAdapter(adapter);
-        sp_userType.setEnabled(false);
 
         btn_register.setOnClickListener(new View.OnClickListener() {
             @Override

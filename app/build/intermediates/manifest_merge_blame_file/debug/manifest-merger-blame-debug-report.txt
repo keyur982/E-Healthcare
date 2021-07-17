@@ -1,0 +1,81 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.ehealth.app"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="19"
+8-->D:\Project\EHealthCare App\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="29" />
+9-->D:\Project\EHealthCare App\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->D:\Project\EHealthCare App\app\src\main\AndroidManifest.xml:5:5-67
+11-->D:\Project\EHealthCare App\app\src\main\AndroidManifest.xml:5:22-64
+12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+12-->D:\Project\EHealthCare App\app\src\main\AndroidManifest.xml:6:5-79
+12-->D:\Project\EHealthCare App\app\src\main\AndroidManifest.xml:6:22-76
+13    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+13-->D:\Project\EHealthCare App\app\src\main\AndroidManifest.xml:7:5-76
+13-->D:\Project\EHealthCare App\app\src\main\AndroidManifest.xml:7:22-73
+14    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+14-->D:\Project\EHealthCare App\app\src\main\AndroidManifest.xml:8:5-75
+14-->D:\Project\EHealthCare App\app\src\main\AndroidManifest.xml:8:22-72
+15
+16    <application
+16-->D:\Project\EHealthCare App\app\src\main\AndroidManifest.xml:10:5-34:19
+17        android:allowBackup="true"
+17-->D:\Project\EHealthCare App\app\src\main\AndroidManifest.xml:11:9-35
+18        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+18-->[androidx.core:core:1.2.0] C:\Users\Keyur\.gradle\caches\transforms-2\files-2.1\4f3d7d743df13c1af889a0942a35670d\core-1.2.0\AndroidManifest.xml:24:18-86
+19        android:debuggable="true"
+20        android:icon="@drawable/medical_app"
+20-->D:\Project\EHealthCare App\app\src\main\AndroidManifest.xml:12:9-45
+21        android:label="@string/app_name"
+21-->D:\Project\EHealthCare App\app\src\main\AndroidManifest.xml:13:9-41
+22        android:roundIcon="@drawable/medical_app"
+22-->D:\Project\EHealthCare App\app\src\main\AndroidManifest.xml:14:9-50
+23        android:supportsRtl="true"
+23-->D:\Project\EHealthCare App\app\src\main\AndroidManifest.xml:15:9-35
+24        android:testOnly="true"
+25        android:theme="@style/AppTheme"
+25-->D:\Project\EHealthCare App\app\src\main\AndroidManifest.xml:17:9-40
+26        android:usesCleartextTraffic="true" >
+26-->D:\Project\EHealthCare App\app\src\main\AndroidManifest.xml:16:9-44
+27        <activity android:name="com.ehealth.app.HospitalPage" />
+27-->D:\Project\EHealthCare App\app\src\main\AndroidManifest.xml:18:9-50
+27-->D:\Project\EHealthCare App\app\src\main\AndroidManifest.xml:18:19-47
+28        <activity
+28-->D:\Project\EHealthCare App\app\src\main\AndroidManifest.xml:19:9-27:20
+29            android:name="com.ehealth.app.MainActivity"
+29-->D:\Project\EHealthCare App\app\src\main\AndroidManifest.xml:20:13-41
+30            android:theme="@style/AppTheme.NoActionBar" >
+30-->D:\Project\EHealthCare App\app\src\main\AndroidManifest.xml:21:13-56
+31            <intent-filter>
+31-->D:\Project\EHealthCare App\app\src\main\AndroidManifest.xml:22:13-26:29
+32                <action android:name="android.intent.action.MAIN" />
+32-->D:\Project\EHealthCare App\app\src\main\AndroidManifest.xml:23:17-69
+32-->D:\Project\EHealthCare App\app\src\main\AndroidManifest.xml:23:25-66
+33
+34                <category android:name="android.intent.category.LAUNCHER" />
+34-->D:\Project\EHealthCare App\app\src\main\AndroidManifest.xml:25:17-77
+34-->D:\Project\EHealthCare App\app\src\main\AndroidManifest.xml:25:27-74
+35            </intent-filter>
+36        </activity>
+37        <activity
+37-->D:\Project\EHealthCare App\app\src\main\AndroidManifest.xml:28:9-29:59
+38            android:name="com.ehealth.app.Register"
+38-->D:\Project\EHealthCare App\app\src\main\AndroidManifest.xml:28:19-43
+39            android:theme="@style/AppTheme.NoActionBar" />
+39-->D:\Project\EHealthCare App\app\src\main\AndroidManifest.xml:29:13-56
+40        <activity
+40-->D:\Project\EHealthCare App\app\src\main\AndroidManifest.xml:30:9-33:20
+41            android:name="com.ehealth.app.Login"
+41-->D:\Project\EHealthCare App\app\src\main\AndroidManifest.xml:30:19-40
+42            android:theme="@style/AppTheme.NoActionBar" >
+42-->D:\Project\EHealthCare App\app\src\main\AndroidManifest.xml:31:13-56
+43        </activity>
+44    </application>
+45
+46</manifest>

@@ -17,12 +17,6 @@
         android:label="@string/menu_search"
         tools:layout="@layout/fragment_search" />
 
-   <!-- <fragment
-        android:id="@+id/nav_saved"
-        android:name="com.ehealth.app.ui.gallery.GalleryFragment"
-        android:label="@string/menu_saved"
-        tools:layout="@layout/fragment_saved" />-->
-
     <fragment
         android:id="@+id/nav_medic"
         android:name="com.ehealth.app.ui.medic.MedicFragment"

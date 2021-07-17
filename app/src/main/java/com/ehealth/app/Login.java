@@ -50,7 +50,7 @@ import java.util.regex.Pattern;
 
 public class Login extends AppCompatActivity {
     ImageView iv_login;
-    Spinner sp_userType;
+
     TextInputLayout tl_email, tl_password;
     TextInputEditText et_email,et_password;
     TextView tv_register;
@@ -66,46 +66,12 @@ public class Login extends AppCompatActivity {
         iv_login = findViewById(R.id.img_login);
         et_email = findViewById(R.id.et_email);
         et_password = findViewById(R.id.et_password);
-        sp_userType = findViewById(R.id.sp_userType);
         tv_register = findViewById(R.id.tv_register);
         btn_login = findViewById(R.id.btn_login);
         tl_email = findViewById(R.id.text_input_email);
         tl_password = findViewById(R.id.text_input_password);
 
 
-        /*String[] types = {"User","Doctor","Admin"};
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, types);
-        sp_userType.setAdapter(adapter);
-
-        sp_userType.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                switch (position) {
-                    case 0:
-                        //iv_login.setImageResource(R.drawable.user);
-                        if(!init)
-                            ImageViewAnimatedChange(Login.this,iv_login,R.drawable.user);
-                        init=false;
-                        break;
-                    case 1:
-                        //iv_login.setImageResource(R.drawable.doctor);
-                        ImageViewAnimatedChange(Login.this,iv_login,R.drawable.doctor);
-                        break;
-                    case 2:
-                        //iv_login.setImageResource(R.drawable.admin);
-                        ImageViewAnimatedChange(Login.this,iv_login,R.drawable.admin);
-                        break;
-                    default:
-                        iv_login.setImageResource(R.drawable.user);
-                        break;
-                }
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-                //iv_login.setImageDrawable(Drawable.createFromPath("user.png"));
-            }
-        });*/
 
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
